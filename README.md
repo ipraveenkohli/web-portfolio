@@ -1,4 +1,4 @@
-# 🌐 Portfolio Website Architecture                  🌐 Live Portfolio: praveen.live 
+# 🌐 Portfolio Website Architecture                   Live Portfolio: www.praveen.live 
 
 ## Overview
 This portfolio website is hosted on **AWS S3** with **CloudFront CDN** for global delivery, secured by **ACM SSL certificates**, and fronted by **Cloudflare** for DNS management and additional caching/security. The domain is registered in **GoDaddy**, with nameservers delegated to Cloudflare.
