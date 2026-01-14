@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>praveen@devops:~# whoami</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>root@devops:~# whoami</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -74,7 +74,137 @@
                 </p>
             </div>
 
-            <div class="skills-grid">
+            <!-- View Toggle -->
+            <div class="view-toggle">
+                <button class="toggle-btn active" onclick="switchView('grid')">
+                    <i class="fas fa-th"></i> Grid View
+                </button>
+                <button class="toggle-btn" onclick="switchView('list')">
+                    <i class="fas fa-terminal"></i> Terminal View
+                </button>
+            </div>
+
+            <!-- Terminal List View -->
+            <div class="terminal-list-view" id="terminalListView">
+                <div class="terminal-list-header">
+                    <span class="prompt">$</span> ls -l /var/devops/skills/
+                </div>
+                
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">4.2MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">kubernetes.skill <span class="ls-level">[95% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">3.8MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">docker.skill <span class="ls-level">[98% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">5.1MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">aws.skill <span class="ls-level">[92% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">2.9MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">terraform.skill <span class="ls-level">[90% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">3.5MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">cicd-pipeline.skill <span class="ls-level">[94% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">2.1MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">python-automation.skill <span class="ls-level">[88% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">3.3MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">monitoring-stack.skill <span class="ls-level">[91% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">2.7MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">security-hardening.skill <span class="ls-level">[86% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">2.4MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">ansible-playbooks.skill <span class="ls-level">[87% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">4.8MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">linux-administration.skill <span class="ls-level">[96% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">1.9MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">git-workflows.skill <span class="ls-level">[93% proficient]</span></span>
+                </div>
+
+                <div class="terminal-list-item">
+                    <span class="ls-permissions">-rwxr-xr-x</span>
+                    <span class="ls-owner">root</span>
+                    <span class="ls-owner">devops</span>
+                    <span class="ls-size">3.6MB</span>
+                    <span class="ls-date">Jan 14 2026</span>
+                    <span class="ls-name">azure-cloud.skill <span class="ls-level">[82% proficient]</span></span>
+                </div>
+
+                <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(0, 255, 65, 0.2);">
+                    <span class="prompt">$</span> <span style="color: var(--text-dim);">Total: 12 skills loaded successfully</span>
+                </div>
+            </div>
+
+            <!-- Grid View -->
+            <div class="skills-grid active" id="skillsGridView">
                 <div class="skill-box">
                     <div class="skill-box-header">
                         <div class="skill-icon-wrapper">
@@ -619,18 +749,19 @@
 
             <div class="about-grid">
                 <div class="about-terminal">
-                    <p class="about-text">
-                        <strong style="color: var(--terminal-green);">praveen@devops:~#</strong> I'm a DevOps engineer with 5+ years of experience architecting and scaling cloud-native infrastructure at enterprise scale. My expertise spans Kubernetes orchestration, automated CI/CD pipelines, infrastructure as code, and security-first architectures.
-                    </p>
-                    <p class="about-text">
-                        My mission is to bridge the gap between development and operations, creating seamless workflows that empower engineering teams to ship faster, safer, and with absolute confidence. I believe in the power of automation, the necessity of monitoring everything, and the criticality of infrastructure as code.
-                    </p>
-                    <p class="about-text">
-                        When I'm not architecting cloud solutions or optimizing deployment pipelines, you'll find me contributing to open-source projects, experimenting with cutting-edge DevOps tools, writing technical deep-dives, or mentoring the next generation of infrastructure engineers.
-                    </p>
+                    <div class="about-text-wrapper">
+                        <strong style="color: var(--terminal-green);">praveen@devops:~#</strong> 
+                        <span class="typing-animation" id="aboutLine1"></span>
+                    </div>
+                    <div class="about-text-wrapper">
+                        <span class="typing-animation line-2" id="aboutLine2"></span>
+                    </div>
+                    <div class="about-text-wrapper">
+                        <span class="typing-animation line-3" id="aboutLine3"></span>
+                    </div>
                     <p class="about-text" style="margin-top: 30px;">
                         <strong style="color: var(--neon-cyan);">$ echo $PHILOSOPHY</strong><br>
-                        "Automate everything. Monitor everything. Break things in staging, not production."
+                        <span style="color: var(--neon-yellow);">"Automate everything. Monitor everything. Break things in staging, not production."</span>
                     </p>
                 </div>
 
@@ -669,7 +800,7 @@
                 <p class="contact-description">
                     Let's build something extraordinary. Whether you need to scale your infrastructure, optimize your deployments, or architect a cloud-native platform from scratch, I'm here to help transform your operations.
                 </p>
-                <a href="mailto:root@devops-infra.io" class="contact-email">contact@praveen.live</a>
+                <a href="/cdn-cgi/l/email-protection#7705181803371312011807045a1e19110516591e18" class="contact-email"><span class="__cf_email__" data-cfemail="7e0c11110a3e1a1b08110e0d531710180c1f501711">[email&#160;protected]</span></a>
                 
                 <div class="social-links">
                     <a href="#" class="social-link" title="GitHub">
@@ -705,7 +836,60 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // View toggle function for skills section - MUST BE GLOBAL
+        window.switchView = function(view) {
+            const gridView = document.getElementById('skillsGridView');
+            const listView = document.getElementById('terminalListView');
+            const buttons = document.querySelectorAll('.toggle-btn');
+
+            console.log('Switching to:', view);
+            console.log('Grid View:', gridView);
+            console.log('List View:', listView);
+
+            if (view === 'grid') {
+                if (gridView) gridView.style.display = 'grid';
+                if (listView) listView.style.display = 'none';
+                if (buttons[0]) buttons[0].classList.add('active');
+                if (buttons[1]) buttons[1].classList.remove('active');
+            } else if (view === 'list') {
+                if (listView) listView.style.display = 'block';
+                if (gridView) gridView.style.display = 'none';
+                if (buttons[1]) buttons[1].classList.add('active');
+                if (buttons[0]) buttons[0].classList.remove('active');
+            }
+        }
+
+        // Auto-switch views every 10 seconds
+        let currentView = 'grid';
+        let autoSwitchEnabled = true;
+
+        function autoSwitchViews() {
+            if (autoSwitchEnabled) {
+                currentView = currentView === 'grid' ? 'list' : 'grid';
+                window.switchView(currentView);
+            }
+        }
+
+        // Start auto-switching
+        let autoSwitchInterval = setInterval(autoSwitchViews, 10000);
+
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Disable auto-switch when user manually clicks
+            document.querySelectorAll('.toggle-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    autoSwitchEnabled = false;
+                    clearInterval(autoSwitchInterval);
+                    // Re-enable after 30 seconds
+                    setTimeout(() => {
+                        autoSwitchEnabled = true;
+                        autoSwitchInterval = setInterval(autoSwitchViews, 10000);
+                    }, 30000);
+                });
+            });
+        });
+
         // Matrix rain effect
         function createMatrixRain() {
             const matrixBg = document.getElementById('matrixBg');
@@ -730,6 +914,28 @@
         }
 
         createMatrixRain();
+
+        // Automatic responsive scaling
+        function adjustViewportScale() {
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            
+            // Auto-adjust for very small or very large screens
+            if (viewportWidth < 360) {
+                document.querySelector('meta[name="viewport"]').setAttribute('content', 
+                    'width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no');
+            } else if (viewportWidth > 2560) {
+                document.querySelector('meta[name="viewport"]').setAttribute('content', 
+                    'width=device-width, initial-scale=1.2, maximum-scale=1.5, user-scalable=yes');
+            } else {
+                document.querySelector('meta[name="viewport"]').setAttribute('content', 
+                    'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+            }
+        }
+
+        // Call on load and resize
+        adjustViewportScale();
+        window.addEventListener('resize', adjustViewportScale);
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -764,17 +970,67 @@
             observer.observe(element);
         });
 
+        // Typing animation for about section
+        const aboutTexts = [
+            "I'm a DevOps engineer with 5+ years of experience architecting and scaling cloud-native infrastructure at enterprise scale. My expertise spans Kubernetes orchestration, automated CI/CD pipelines, infrastructure as code, and security-first architectures.",
+            "My mission is to bridge the gap between development and operations, creating seamless workflows that empower engineering teams to ship faster, safer, and with absolute confidence. I believe in the power of automation, the necessity of monitoring everything, and the criticality of infrastructure as code.",
+            "When I'm not architecting cloud solutions or optimizing deployment pipelines, you'll find me contributing to open-source projects, experimenting with cutting-edge DevOps tools, writing technical deep-dives, or mentoring the next generation of infrastructure engineers."
+        ];
+
+        function typeText(elementId, text, delay = 0) {
+            setTimeout(() => {
+                const element = document.getElementById(elementId);
+                if (!element) return;
+                
+                let i = 0;
+                element.style.borderRight = '3px solid var(--terminal-green)';
+                element.textContent = '';
+                
+                const typing = setInterval(() => {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typing);
+                        setTimeout(() => {
+                            element.style.borderRight = '3px solid transparent';
+                        }, 500);
+                    }
+                }, 20); // Faster typing - 20ms per character
+            }, delay);
+        }
+
+        // Trigger typing when about section is visible
+        const aboutObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.typed) {
+                    entry.target.dataset.typed = 'true';
+                    
+                    // Start typing animations with delays
+                    setTimeout(() => {
+                        typeText('aboutLine1', aboutTexts[0], 0);
+                    }, 500);
+                    
+                    setTimeout(() => {
+                        typeText('aboutLine2', aboutTexts[1], 0);
+                    }, 3500); // Start after first line
+                    
+                    setTimeout(() => {
+                        typeText('aboutLine3', aboutTexts[2], 0);
+                    }, 6500); // Start after second line
+                }
+            });
+        }, { threshold: 0.2 });
+
+        // Observe the about section
+        setTimeout(() => {
+            const aboutSection = document.querySelector('#about');
+            if (aboutSection) {
+                aboutObserver.observe(aboutSection);
+            }
+        }, 100);
+
         // Add random flicker effect to terminal
         setInterval(() => {
             const terminals = document.querySelectorAll('.terminal-window, .skill-box, .project-terminal');
-            const random = terminals[Math.floor(Math.random() * terminals.length)];
-            if (random) {
-                random.style.opacity = '0.95';
-                setTimeout(() => {
-                    random.style.opacity = '1';
-                }, 50);
-            }
-        }, 3000);
-    </script>
-</body>
-</html>
+            const random = terminals[Math.floor(Math.random() * terminals.length
